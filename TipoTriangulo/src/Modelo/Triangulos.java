@@ -30,10 +30,9 @@ public class Triangulos extends absPropriedades
             {
                 this.setResposta("triangulo isósceles");
             }
+            else
+                this.setResposta("triangulo escaleno");
         }
-        if (this.getL1() != this.getL2() && this.getL2() != this.getL3() && this.getL3() != this.getL1())
-        {
-            this.setResposta("triangulo escaleno");
-        }
+        
     }
 }

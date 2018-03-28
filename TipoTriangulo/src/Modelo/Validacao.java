@@ -32,18 +32,14 @@ public class Validacao extends absPropriedades
             this.setMensagem("valor invalido");
         }
         
-       
-        if(this.getL1()+this.getL2()>this.getL3())
+        if (this.getMensagem().equals(""))
         {
-            this.setMensagem("não é um triangulo");
+            if(this.getL1()+this.getL2()<=this.getL3() || this.getL2()+this.getL3()<=this.getL1() || this.getL3()+this.getL1()<=this.getL2())
+            {
+                this.setMensagem("não é um triangulo");
+            }
         }
-        if(this.getL2()+this.getL3()>this.getL1())
-        {
-            this.setMensagem("não é um triangulo");
-        }
-        if(this.getL3()+this.getL1()>this.getL2())
-        {
-            this.setMensagem("não é um triangulo");
-        } 
+        
+        
     }
 }

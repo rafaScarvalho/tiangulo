@@ -1,6 +1,8 @@
 
 package tipotriangulo;
 
+import javax.swing.JOptionPane;
+
 public class frmPrincipal extends javax.swing.JDialog
 {
 
@@ -110,8 +112,14 @@ public class frmPrincipal extends javax.swing.JDialog
                 txfLado1.getText(),
                 txfLado2.getText(),
                 txfLado3.getText());
-        
-        lblResposta.setText(controle.getResposta());
+        if (controle.getMensagem().equals(""))
+        {
+            lblResposta.setText(controle.getResposta());
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, controle.getMensagem());
+        }
     }//GEN-LAST:event_btnVerificarActionPerformed
 
     public static void main(String args[])
